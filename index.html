@@ -476,8 +476,8 @@
                 type="text" 
                 name="username" 
                 id="username"
-                class="modal-item"
-                autofocus 
+                class="form-item" 
+                required 
               />
               <svg class="form-icons" width="24" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
@@ -492,7 +492,8 @@
                 type="tel" 
                 name="tel" 
                 id="phone"
-                class="modal-item"
+                class="form-item"
+                required
               />
               <svg class="form-icons" width="24" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
@@ -507,7 +508,7 @@
                 type="email" 
                 name="email" 
                 id="mail"
-                class="modal-item"
+                class="form-item"
               />
               <svg class="form-icons" width="24" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
@@ -517,8 +518,25 @@
 
           <div class="form-items-wraper">
             <label for="comment" class="label-text">Comment</label>
-            <textarea id="comment" name="textarea" placeholder="Text input" class="modal-item textarea"></textarea>
+            <textarea id="comment" name="textarea" placeholder="Text input" class="form-item textarea" required></textarea>
           </div>
+
+          <div class="privacy-policy">
+            <input 
+              type="checkbox" 
+              name="checkbox" 
+              id="checkbox"
+              class="checkbox-input visually-hidden"
+              required
+            />
+
+            <label for="checkbox" class="text-privacy-policy">
+              I accept the terms and conditions of the 
+              <a href="/" class="link-privacy-policy">Privacy policy</a>
+            </label>
+          </div>
+
+          <button class="btn-form-send" type="submit">Send</button>
         </form>
       </div>
     </div>
