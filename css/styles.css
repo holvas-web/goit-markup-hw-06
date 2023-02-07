@@ -184,7 +184,7 @@ body {
 .services-titel > span {
   text-transform: lowercase;
 }
-.services-button, .btn-form-send {
+.services-button {
   background-color: var(--primary);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -205,13 +205,16 @@ body {
 
   transition: background-color var(--transition), box-shadow var(--transition);
 }
-.services-button:hover,
-.services-button:focus {
+.services-button:hover, 
+.services-button:focus, 
+.btn-form-send:hover,
+.btn-form-send:focus {
   background-color: var(--pressed-state);
   box-shadow: 
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
+
   cursor: pointer;
 }
 .features {
@@ -383,6 +386,9 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 .text-footer {
   margin-right: 120px;
 }
+/* .socmedia {
+  margin-right: 80px;
+} */
 .socmedia-text, .subscribe-text {
   color: var(--white);
   margin-bottom: 16px;
@@ -404,11 +410,13 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 .footer-form {
   display: flex;
 }
+.footer-form > label {
+  margin-right: 24px;
+}
 .footer-input {
   min-width: 264px;
   height: 40px;
   padding: 8px 16px;
-  margin-right: 24px;
 
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -429,11 +437,14 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 
   background-color: var(--primary);
   border: none;
+  border-radius: 4px;
   gap: 16px;color: var(--white);
 
   font-weight: 500;
   letter-spacing: 0.04em;
   transition: var(--transition);
+
+  cursor: pointer;
 }
 .footer-btn:is(:hover, :focus) {
   background-color: var(--pressed-state);
@@ -608,13 +619,16 @@ flex-basis: calc((100% - 3 * 24px) / 4);
   font-weight: 500;
   line-height: 1.5;
   color: var(--dark);
+  text-align: center;
 
-  padding: 0 10px;
   margin-bottom: 14px;
 }
 .modal-form {
   display: flex;
   flex-direction: column;
+}
+.form-items-wraper {
+  margin-bottom: 26px;
 }
 .label-text {
   font-size: 12px;
@@ -624,12 +638,11 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 }
 .input-wrap {
   position: relative;
-  margin-bottom: 26px;
+  margin-top: 4px;
 }
 .form-item {
   width: 100%;
   height: 40px;
-  margin-top: 4px;
   padding-left: 45px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -665,6 +678,10 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 }
 .privacy-policy {
   position: relative;
+}
+
+.checkbox-input {
+  transition: background-color var(--transition);
 }
 .checkbox-input:checked + .text-privacy-policy::before {
   background-color: var(--pressed-state);
@@ -708,15 +725,8 @@ flex-basis: calc((100% - 3 * 24px) / 4);
 }
  .btn-form-send {
   margin-top: 24px;
-  min-width: 170px;
-  align-self: center;
-  transition: background-color var(--pressed-state) ;
+  transition: background-color var(--transition), box-shadow var(--transition);
 }
-.btn-form-send:is(:hover, :focus) {
-  background-color: var(--pressed-state);
-  box-shadow: 
-  0px 1px 6px rgba(46, 47, 66, 0.08),
-  0px 1px 1px rgba(46, 47, 66, 0.16), 
-  0px 2px 1px rgba(46, 47, 66, 0.08);
-  cursor: pointer;
+.btn-form-send > span {
+  padding: 0 32px;
 }
